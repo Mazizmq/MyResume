@@ -1,11 +1,81 @@
 h1 {
-    text-align: center 
+    text-align: center
 }
+
 footer p {
-    text-align: center 
+    text-align: center
 }
 
 .PP {
     position: relative;
     left: 50%;
+}
+
+/* Contact Card Styles */
+.contact-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 4rem;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    width: auto;
+    min-width: 250px;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    /* Default hover fallback */
+    background: white;
+    color: #333;
+    border-color: white;
+}
+
+.contact-card img {
+    transition: transform 0.3s ease;
+    filter: none;
+    /* Ensure icons retain color normally */
+}
+
+.contact-card:hover img {
+    transform: scale(1.1) rotate(5deg);
+    filter: brightness(0) invert(1);
+    /* Make icons white on hover */
+}
+
+.contact-card span {
+    font-size: 1.5rem;
+}
+
+/* High Contrast Brand Hovers */
+.contact-card.gmail:hover {
+    background-color: #db4437;
+    color: white;
+    border-color: #db4437;
+}
+
+.contact-card.linkedin:hover {
+    background-color: #0077b5;
+    color: white;
+    border-color: #0077b5;
+}
+
+.contact-card.kaggle:hover {
+    background-color: #20beff;
+    color: white;
+    border-color: #20beff;
+}
+
+.contact-card.github:hover {
+    background-color: #333;
+    color: white;
+    border-color: #333;
 }
